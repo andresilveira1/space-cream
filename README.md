@@ -25,6 +25,8 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 O Space Cream é um projeto do curso Explorer Rocketseat, para aplicação dos seguintes conceitos:
 
 - Mobile First.
+- Versão Desktop.
+- Media queries.
 - Unidade de medida flexível.
 - Variáveis no css.
-- Animações simples.
+- Animações e transições.

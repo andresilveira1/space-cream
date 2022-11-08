@@ -10,6 +10,7 @@
   --bg-header: hsl(218, 17%, 62%);
   --bg-h1: hsl(275, 18%, 79%);
   --bg-span: hsl(312, 91%, 96%);
+  --text-color: hsl(0, 0%, 100%);
   --color-span: hsl(232, 17%, 35%);
 }
 
@@ -30,12 +31,8 @@ body::after {
   z-index: -1;
 }
 
-.page {
-  max-width: 38.4rem;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto 6rem;
-  text-align: center;
+.container {
+  margin-bottom: 6rem;
 }
 
 header {
@@ -56,7 +53,7 @@ h1 {
   font-size: 4rem;
   line-height: 3.4rem;
   letter-spacing: 0.05em;
-  color: #fff;
+  color: var(--text-color);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 
   width: 100%;
@@ -68,17 +65,23 @@ h1 {
 main {
   display: grid;
   gap: 3.4rem;
-  margin: auto;
+}
+
+.desktop {
+  display: none;
 }
 
 p {
   font-family: 'Palanquin', sans-serif;
   font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
   color: #23053a;
 
-  margin-bottom: 6.3rem;
+  max-width: 31.5rem;
+  text-align: center;
+
+  margin: 0 auto 6.3rem;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -86,16 +89,24 @@ main div + div {
   margin-top: 3.6rem;
 }
 
+main div:nth-child(2),
+main div:nth-child(5) {
+  display: none;
+}
+
 .card {
   position: relative;
-  width: 32rem;
   margin: auto;
 }
 
 .card img {
   animation: frombottom 1.5s 500ms backwards;
+  transition: transform 0.5s;
 }
 
+.card img:hover {
+  transform: scale(1.1);
+}
 .card span {
   position: absolute;
   right: 0;
@@ -112,6 +123,10 @@ main div + div {
   padding: 0 2.4rem;
 
   animation: fromtop 1s 500ms backwards;
+}
+
+footer {
+  display: none;
 }
 
 @keyframes fromtop {
@@ -138,18 +153,65 @@ main div + div {
   }
 }
 
-@media (min-width: 1000px) {
-  .page {
-    max-width: 117rem;
+@media (min-width: 1280px) {
+  body::after {
+    background-color: #fff;
   }
 
-  p {
-    padding: 0 30rem;
+  header {
+    background: var(--bg-header);
+    height: 100vh;
+    width: 37.7rem;
+
+    justify-content: center;
+  }
+
+  header img {
+    margin-bottom: 3.2rem;
+  }
+
+  header h1 {
+    font-size: 4.8rem;
+    line-height: 3.4rem;
+    padding: 2.1rem 0 2.1rem;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 0;
+  }
+
+  .page {
+    margin-top: 6.4rem;
   }
 
   main {
-    width: fit-content;
-    grid-template-areas: 'A C' 'B D';
+    padding: 6.4rem 8.1rem 0 9.8rem;
+
+    grid-template-columns: 22rem 22rem 22rem;
+    grid-template-rows: 17.2rem 31rem;
+    grid-gap: 3.2rem;
+    grid-template-areas: 'A B C' 'D E F';
+  }
+
+  .card img {
+    max-width: 22rem;
   }
 
   main div:nth-child(1) {
@@ -157,14 +219,46 @@ main div + div {
   }
 
   main div:nth-child(3) {
-    grid-area: C;
-  }
-
-  main div:nth-child(2) {
     grid-area: B;
   }
 
+  main div:nth-child(2) {
+    display: inline;
+    grid-area: C;
+  }
+
   main div:nth-child(4) {
+    margin-top: 62.5%;
+    grid-area: E;
+  }
+
+  main div:nth-child(5) {
+    display: inline;
     grid-area: D;
+  }
+
+  main div:nth-child(6) {
+    grid-area: F;
+  }
+
+  footer {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #4a4e69;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 5rem;
+  }
+
+  footer a {
+    font-weight: 700;
+    text-decoration: none;
+    color: #4a4e69;
+
+    margin-left: 5px;
   }
 }

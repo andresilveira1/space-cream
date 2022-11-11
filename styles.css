@@ -64,6 +64,7 @@ h1 {
 
 main {
   display: grid;
+  margin: 0 auto;
   gap: 3.4rem;
 }
 
@@ -129,30 +130,6 @@ footer {
   display: none;
 }
 
-@keyframes fromtop {
-  0% {
-    transform: translateY(-5rem);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes frombottom {
-  0% {
-    transform: translateY(5rem);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @media (min-width: 1280px) {
   body::after {
     background-color: #fff;
@@ -204,9 +181,9 @@ footer {
   main {
     padding: 6.4rem 8.1rem 0 9.8rem;
 
-    grid-template-columns: 22rem 22rem 22rem;
-    grid-template-rows: 17.2rem 31rem;
     grid-gap: 3.2rem;
+    grid-template-columns: repeat(3, 22rem);
+    grid-template-rows: 17.2rem 31rem;
     grid-template-areas: 'A B C' 'D E F';
   }
 
@@ -260,5 +237,72 @@ footer {
     color: #4a4e69;
 
     margin-left: 5px;
+  }
+}
+
+@media (min-width: 800px) {
+  main {
+    justify-content: center;
+    padding: 6.4rem 8.1rem 0 9.8rem;
+
+    grid-gap: 3.2rem;
+    grid-template-columns: repeat(3, 22rem);
+    grid-template-rows: 17.2rem 31rem;
+    grid-template-areas: 'A B C' 'D E F';
+  }
+
+  .card img {
+    max-width: 22rem;
+  }
+
+  main div:nth-child(1) {
+    grid-area: A;
+  }
+
+  main div:nth-child(3) {
+    grid-area: B;
+  }
+
+  main div:nth-child(2) {
+    display: inline;
+    grid-area: C;
+  }
+
+  main div:nth-child(4) {
+    margin-top: 62.5%;
+    grid-area: E;
+  }
+
+  main div:nth-child(5) {
+    display: inline;
+    grid-area: D;
+  }
+
+  main div:nth-child(6) {
+    grid-area: F;
+  }
+}
+
+@keyframes fromtop {
+  0% {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes frombottom {
+  0% {
+    transform: translateY(5rem);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

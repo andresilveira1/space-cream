@@ -182,9 +182,10 @@ footer {
     padding: 6.4rem 8.1rem 0 9.8rem;
 
     grid-gap: 3.2rem;
-    grid-template-columns: repeat(3, 22rem);
-    grid-template-rows: 17.2rem 31rem;
-    grid-template-areas: 'A B C' 'D E F';
+    grid-template-areas:
+      'A B C'
+      'D B F'
+      'D E F';
   }
 
   .card img {
@@ -205,7 +206,6 @@ footer {
   }
 
   main div:nth-child(4) {
-    margin-top: 62.5%;
     grid-area: E;
   }
 
@@ -246,9 +246,10 @@ footer {
     padding: 6.4rem 8.1rem 0 9.8rem;
 
     grid-gap: 3.2rem;
-    grid-template-columns: repeat(3, 22rem);
-    grid-template-rows: 17.2rem 31rem;
-    grid-template-areas: 'A B C' 'D E F';
+    grid-template-areas:
+      'A B C'
+      'D B F'
+      'D E F';
   }
 
   .card img {
@@ -269,7 +270,6 @@ footer {
   }
 
   main div:nth-child(4) {
-    margin-top: 62.5%;
     grid-area: E;
   }
 

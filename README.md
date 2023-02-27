@@ -1,9 +1,8 @@
 <h1 align="center"> Space Cream </h1>
 
 <p align="center">
-  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
 <br>
@@ -12,21 +11,21 @@
   <img alt="space-cream" src=".github/preview.png" width="100%">
 </p>
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+This project has been developed with the following technologies:
 
 - HTML
 - CSS
 - Git e Github
 
-## 💻 Projeto
+## 💻 Project
 
-O Space Cream é um projeto do curso Explorer Rocketseat, para aplicação dos seguintes conceitos:
+The Space Cream is a project of Explorer course from Rocketseat, to apply the following concepts:
 
 - Mobile First.
-- Versão Desktop.
+- Desktop Version.
 - Media queries.
-- Unidade de medida flexível.
-- Variáveis no css.
-- Animações e transições.
+- Flexible measurement unit.
+- Variables on css.
+- Animation and transitions.

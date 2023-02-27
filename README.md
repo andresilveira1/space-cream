@@ -11,7 +11,7 @@
   <img alt="space-cream" src=".github/preview.png" width="100%">
 </p>
 
-## 🚀 Tecnologias
+## 🚀 Technologies
 
 This project has been developed with the following technologies:
 
